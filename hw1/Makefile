@@ -5,15 +5,10 @@ $(TARGET_NAMES) : $(TARGET_OBJS)
 
 $(TARGET_OBJS): $(TARGET_SRCS)
 	$(CC) $(CFLAG) $^	
-.PHONY: objOnly binOnly description 
+.PHONY: clean description
 clean:
 	rm -rf  $(TARGET_OBJS)
 	rm -rf  $(TARGET_NAMES)
-objOnly:
-	$(TARGET_OBJS): $(TARGET_SRCS)
-	$(CC) $(CFLAG) $^
-binOnly:
-	$(TARGET_NAMES) : $(TARGET_OBJS)
-	$(CC) $(OFLAG) $@ $^
+
 description:
 	@echo "makefile for compiling $(TARGET_NAMES) "
