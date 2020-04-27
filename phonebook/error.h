@@ -1,0 +1,7 @@
+#pragma once
+enum error {
+	PARAM_NULL=-1,
+	FILE_READ_ERROR,
+	FILE_WRITE_ERROR,
+	MAIN_PARAM_ERROR
+};
